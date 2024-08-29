@@ -117,7 +117,7 @@
         }
 
         &:after {
-          top: 5px;
+          top: 5px; 
         }
 
         &::before {
@@ -829,6 +829,11 @@
       height: 0;
       opacity: 0;
       transition: height 0.25s, opacity 0.25s;
+
+      &.show-ques{
+        opacity: 1;
+        height: 34px;
+      }
 
       p {
         padding-top: 13px;

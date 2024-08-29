@@ -34,6 +34,13 @@ const limPsTitle = document.getElementById('limPsTitle')
 const checkSwitch2 = document.getElementById('switch2')
 const stanPs = document.getElementById('standard')
 const limPs = document.getElementById('limited')
+const faqBtn1 = document.getElementById('faqBtn1')
+const faqBtn2 = document.getElementById('faqBtn2')
+const faqBtn3 = document.getElementById('faqBtn3')
+const faqContent1 = document.getElementById('faqContent1')
+const faqContent2 = document.getElementById('faqContent2')
+const faqContent3 = document.getElementById('faqContent3')
+
 
 burgerMenu.addEventListener('click', function(){
     ul.classList.toggle('show')
@@ -158,4 +165,16 @@ checkSwitch2.addEventListener('click', function(){
         stanPsTitle.classList.toggle('active')
         limPsTitle.classList.toggle('active')
     }
+})
+
+faqBtn1.addEventListener('click', function(){
+    faqContent1.classList.toggle('show-ques')
+})
+
+faqBtn2.addEventListener('click', function(){
+    faqContent2.classList.toggle('show-ques')
+})
+
+faqBtn3.addEventListener('click', function(){
+    faqContent3.classList.toggle('show-ques')
 })
