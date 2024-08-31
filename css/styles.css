@@ -512,12 +512,6 @@ h2 {
   z-index: 2;
   text-align: center;
 }
-.video-info.hidden {
-  opacity: 0;
-}
-.video-info.hidden:hover {
-  opacity: 1;
-}
 .video-title {
   font-weight: 500;
   font-size: 50px;

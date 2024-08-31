@@ -485,14 +485,6 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
-
-    &.hidden {
-      opacity: 0;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
   }
 
   &-title {
@@ -500,7 +492,7 @@
     font-size: 50px;
     color: $white;
     line-height: 39px;
-    &.hidden{
+    &.hidden {
       display: none;
     }
   }

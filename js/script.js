@@ -136,9 +136,9 @@ closebtn.addEventListener('click', function() {
 
 videoBtn.addEventListener('click', function(){
     video.play()
-    videoBtn.classList.add('hidden')
-    video.classList.add('active')
-    videoTitle.classList.add('hidden')
+    videoBtn.classList.toggle('hidden')
+    video.classList.toggle('active')
+    videoTitle.classList.toggle('hidden')
 })
 
 
