@@ -178,3 +178,5 @@ faqBtn2.addEventListener('click', function(){
 faqBtn3.addEventListener('click', function(){
     faqContent3.classList.toggle('show-ques')
 })
+
+
