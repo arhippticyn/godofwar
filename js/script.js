@@ -1,6 +1,5 @@
 const burgerMenu = document.getElementById('burger-menu')
 const ul = document.getElementById('ul')
-var endDate = new Date("Dec 31, 2024 23:59:59").getTime();
 const lang = document.querySelector('.lang')
 const langs = document.querySelector('.header-menu__languages')
 const svg = document.getElementById('svg')

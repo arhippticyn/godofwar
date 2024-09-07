@@ -12,6 +12,50 @@
     <title>God of war</title>
 </head>
 <body>
+  <!-- <div class="mobile-burger-menu ul-hidden" id="mobile-menu">
+    <div class="mobile-burger-menu-top">
+        <div class="mobile-burger-menu-top-burger-mobile" id="mobile-burger-menu-top-burger-mobile">
+            <div class="mobile-burger-menu-top-burger-mobile__burger-line"></div>
+            <div class="mobile-burger-menu-top-burger-mobile__burger-line"></div>
+        </div>
+        <span class="mobile-burger-menu-top-blue">Your<span class="mobile-burger-menu-top-blue__red">.logo</span></span>
+        <img class="mobile-burger-menu-top__icon" src="/image/icon.svg" alt="">
+    </div>
+
+    <ul class="mobile-burger-menu-ul">
+        <li class="mobile-burger-menu-ul-li"><a class="header-nav-li__a" href="/LastMinuteDeals.html">Last Minute Deals</a></li>
+        <li class="mobile-burger-menu-ul-li"><a class="header-nav-li__a" href="#">Blog</a></li>
+        <li class="mobile-burger-menu-ul-li"><a class="header-nav-li__a" href="#">About us</a></li>
+        <li class="mobile-burger-menu-ul-li"><a class="header-nav-li__a" href="#">Contacts</a></li>
+    </ul>
+
+    <div class="mobile-burger-menu-info">
+        <span class="mobile-burger-menu-info__currency">$</span>
+        <span class="mobile-burger-menu-info__lang">EN</span>
+    </div>
+
+    <ul class="mobile-burger-menu-social">
+        <li class="mobile-burger-menu-social-li">
+            <img src="/image/Phone_black.svg" alt="" class="social-li__img">
+        </li>
+        <li class="mobile-burger-menu-social-li">
+
+            <img src="/image/Facebook_black.svg" alt="" class="social-li__img">
+        </li>
+        <li class="mobile-burger-menu-social-li">
+
+            <img src="/image/Youtube_black.svg" alt="" class="social-li__img">
+        </li>
+        <li class="mobile-burger-menu-social-li">
+
+            <img src="/image/Instagram_black.svg" alt="" class="social-li__img">
+        </li>
+        <li class="mobile-burger-menu-social-li">
+
+            <img src="/image/Telegram_black.svg" alt="" class="social-li__img">
+        </li>
+    </ul>
+</div> -->
     <section class="section section-main">
         <div class="container">
             <header class="header flex-center">
@@ -97,7 +141,7 @@
     <section class="section-editions" id="editions">
         <div class="container">
             <div class="editions">
-                <h2>Editions</h2>
+                <h2 id="titleEd">Editions</h2>
 
                 <div class="editions-list">
                     <div class="editions-item">
@@ -127,7 +171,7 @@
                     </div>
 
                     <div class="editions-item">
-                        <div class="editions-item__img" style="background: url(/images/card1.png) no-repeat center/cover;"></div>
+                        <div class="editions-item__img" style="background: url(/images/card1.png) no-repeat center/cover;"> </div>
 
                         <div class="editions-item__title" id="title2">
                             Standard Edition
@@ -184,7 +228,7 @@
 
     <section id="controller" class="section-dual">
         <div class="container">
-            <h2>DualSense</h2>
+            <h2 id="titledu">DualSense</h2>
 
             <div class="dual flex flex-center">
                 <div class="dual-description">
@@ -213,7 +257,7 @@
     </section>
 
     <section class="section section-about" id="about">
-        <h2>About Game</h2>
+        <h2 id="titleVid">About Game</h2>
 
         <div class="video">
             <div class="video-info">
@@ -698,7 +742,7 @@
         const swiper = new Swiper('.swiper', {
     // Optional parameters  
     loop: true,
-  
+    slidesPerView:3,
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
