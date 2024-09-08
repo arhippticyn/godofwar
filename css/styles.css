@@ -1165,28 +1165,17 @@ h2 {
   .container {
     width: 100%;
     margin: 0 auto;
-    padding-left: 20%;
-  }
-  #titledu {
-    margin-left: 18%;
-  }
-  #titleEd {
-    margin-left: 20%;
+    padding-left: 15%;
   }
   #titleVid {
-    margin-left: 40%;
-  }
-  #explTitle {
-    margin-left: 28%;
-  }
-  #exph3Title {
-    margin-left: 31%;
-  }
-  #exph31Title {
-    margin-left: 40%;
+    margin-left: 19%;
   }
   #newsTitle {
-    margin-left: 45%;
+    margin-left: 8%;
+  }
+  #faqTitle {
+    margin-top: -33%;
+    margin-left: -5%;
   }
   .header {
     width: 424px;
@@ -1241,7 +1230,7 @@ h2 {
   }
   .explore-info.reverse .explore-description {
     text-align: center;
-    margin-left: 11%;
+    margin-left: -21%;
   }
   .editions {
     margin-top: -50%;
@@ -1253,6 +1242,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 424px;
+    margin-left: -7%;
   }
   .editions-item {
     background: linear-gradient(180deg, #141615 0%, #1c2023 100%);
@@ -1276,11 +1266,12 @@ h2 {
     margin: 0 auto;
   }
   .dual-description {
-    margin-left: 25%;
+    margin-left: 11%;
     width: 350px;
   }
   .dual-description__info {
     flex-direction: column;
+    margin-left: -9%;
   }
   .dual-description__button {
     margin-top: 20px;
@@ -1292,13 +1283,13 @@ h2 {
     margin-top: 30px;
   }
   .video-info {
-    margin-left: 22%;
+    margin-left: 8%;
   }
   #video {
-    margin-left: 24%;
+    margin-left: 10%;
   }
   .explore-switch {
-    margin-left: 30%;
+    margin-left: 3%;
   }
   .explore-img {
     display: none;
@@ -1308,7 +1299,10 @@ h2 {
     margin-left: 21%;
   }
   .explore-button {
-    margin-left: 46%;
+    margin-left: 35%;
+  }
+  .news {
+    left: 9%;
   }
   .news .swiper-wrapper {
     display: flex;
@@ -1318,6 +1312,27 @@ h2 {
   }
   .news-item__img {
     display: none;
+  }
+  .news-item__button {
+    margin-top: 4%;
+  }
+  .faq-items {
+    margin-top: 6%;
+  }
+  .faq-item {
+    margin-top: 5%;
+  }
+  .footer::before {
+    display: none;
+  }
+  .footer-menu {
+    flex-direction: column;
+  }
+  .footer-top {
+    flex-direction: column;
+  }
+  .footer-lang {
+    justify-content: center;
   }
 }
 @keyframes gravitation {

@@ -1231,28 +1231,32 @@
   .container {
     width: 100%;
     margin: 0 auto;
-    padding-left: 20%;
+    padding-left: 15%;
 }
-  #titledu{
-    margin-left: 18%;
-}
-  #titleEd{
-    margin-left: 20%;
-  }
+//   #titledu{
+//     margin-left: 18%;
+// }
+//   #titleEd{
+//     margin-left: 20%;
+//   }
   #titleVid{
-    margin-left: 40%;
+    margin-left: 19%;
   }
-  #explTitle{
-    margin-left: 28%;
-  }
-  #exph3Title{
-    margin-left: 31%;
-  }
-  #exph31Title{
-    margin-left: 40%;
-  }
+//   #explTitle{
+//     margin-left: 28%;
+//   }
+//   #exph3Title{
+//     margin-left: 31%;
+//   }
+//   #exph31Title{
+//     margin-left: 40%;
+//   }
   #newsTitle{
-    margin-left: 45%;
+    margin-left: 8%;
+  }
+  #faqTitle{
+    margin-top: -33%;
+    margin-left: -5%;
   }
   .header{
     width: 424px;
@@ -1318,7 +1322,7 @@
   }
   .explore-info.reverse .explore-description {
     text-align: center;
-    margin-left: 11%;
+    margin-left:  -21%;
 }
   .editions{
     margin-top: -50%;
@@ -1329,6 +1333,7 @@
       display: flex;
       flex-direction: column;
       width: 424px;
+      margin-left: -7%;
     }
     &-item {
       background: linear-gradient(180deg, #141615 0%, #1c2023 100%);
@@ -1359,10 +1364,11 @@
   }
   .dual{
     &-description{
-      margin-left: 25%;
+      margin-left: 11%;
       width: 350px;
       &__info {
         flex-direction: column;
+        margin-left: -9%;
       }
       &__button {
         margin-top: 20px;
@@ -1376,16 +1382,16 @@
     margin-top: 30px;
 
     &-info{
-      margin-left: 22%;
+      margin-left: 8%;
     }
 
   }
   #video{
-    margin-left: 24%;
+    margin-left: 10%;
   }
   .explore{
     &-switch{
-      margin-left: 30%;
+      margin-left: 3%;
     }
     &-img{
       display: none;
@@ -1395,13 +1401,14 @@
       margin-left: 21%;
     }
     &-button{
-      margin-left: 46%;
+      margin-left: 35%;
     }
   }
   .news{
+    left: 9%;
     .swiper{
       &-wrapper{
-display: flex;
+      display: flex;
       }
     }
     &-item{
@@ -1411,6 +1418,31 @@ display: flex;
       &__img{
         display: none;
       }
+      &__button{
+        margin-top: 4%;
+      }
+    }
+  }
+  .faq{
+    &-items{
+      margin-top: 6%;
+    }
+    &-item{
+      margin-top: 5%;
+    }
+  }
+  .footer{
+    &::before{
+      display: none;
+    }
+    &-menu{
+      flex-direction: column;
+    }
+    &-top{
+      flex-direction: column;
+    }
+    &-lang{
+      justify-content: center;
     }
   }
 }
