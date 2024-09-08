@@ -276,11 +276,11 @@
 
     <section class="section section-explore" id="explore">
         <div class="container">
-            <h2>Explore the God of War series</h2>
+            <h2 id="explTitle">Explore the God of War series</h2>
 
             <div class="explore-items">
                 <div class="explore-item">
-                    <h3>Here are the God of War (PC) System Requirements</h3>
+                    <h3 id="exph3Title">Here are the God of War (PC) System Requirements</h3>
 
                     <div class="explore-switch flex flex-center">
                         <div class="explore-switch__title active" id="minPcTitle">
@@ -349,7 +349,7 @@
                 </div>
 
                 <div class="explore-item">
-                    <h3>God of War for PS4</h3>
+                    <h3 id="exph31Title">God of War for PS4</h3>
 
                     <div class="explore-switch flex flex-center">
                         <div class="explore-switch__title active" id="stanPsTitle">
@@ -376,7 +376,7 @@
                         </div>
 
                         <div class="explore-description">
-                            <ul class="explore-list active" id="standard">
+                            <ul class="explore-list active p" id="standard">
                                 <li><span class="violet">Platform</span>: PS4</li>
                                 <li><span class="violet">Premiere</span>: 20.4.2018</li>
                                 <li>
@@ -392,7 +392,7 @@
                                 </li>
                               </ul>
               
-                              <ul class="explore-list" id="limited">
+                              <ul class="explore-list p" id="limited">
                                 <li><span class="violet">Platform</span>: PS4, PS5</li>
                                 <li><span class="violet">Premiere</span>: 20.4.2018</li>
                                 <li>
@@ -422,7 +422,7 @@
     </section>
 
     <section class="section section-news" id="news">
-        <h2>News</h2>
+        <h2 id="newsTitle">News</h2>
 
         <div class="news swiper flex flex-center">
             <div class="swiper-wrapper">
@@ -741,8 +741,7 @@
     <script>
         const swiper = new Swiper('.swiper', {
     // Optional parameters  
-    loop: true,
-    slidesPerView:3,
+    loop: true, 
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
