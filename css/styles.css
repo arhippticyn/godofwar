@@ -85,6 +85,117 @@ h2 {
   color: #FF4136;
 }
 
+.ul-hidden {
+  transform: translateX(-540px);
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  transition-delay: 0.3s;
+}
+
+.mobile-burger-menu {
+  width: 127vw;
+  height: 122vh;
+  position: fixed;
+  padding-left: 10%;
+  overflow-y: hidden;
+  background: #141615;
+}
+.mobile-burger-menuul {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(-82%);
+}
+.mobile-burger-menu.ul-hidden {
+  display: none;
+}
+.mobile-burger-menu.show-menu {
+  display: block;
+  transform: translateX(0px);
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  transition-delay: 0.3s;
+  height: 120vh;
+  padding-top: 29px;
+}
+.mobile-burger-menu__button {
+  width: 25px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: width 0.25s;
+  margin-top: 3%;
+}
+.mobile-burger-menu__button span {
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  display: block;
+  transform: rotate(41deg);
+  transition: transform 0.7s;
+}
+.mobile-burger-menu__button span::after {
+  display: block;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transition: width 0.25s;
+  transform: rotate(-83deg);
+}
+.mobile-burger-menu-ul {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  text-transform: uppercase;
+}
+.mobile-burger-menu .lang1 {
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.mobile-burger-menu .lang1 svg {
+  width: 12px;
+  height: 12px;
+  fill: #fff;
+  margin-left: 9px;
+}
+.mobile-burger-menu .lang1 svg.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+.mobile-burger-menu__languages {
+  padding: 10px 15px;
+  border-radius: 6px;
+  background: #30373F;
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+.mobile-burger-menu__languages.open {
+  display: block;
+  z-index: 1000;
+}
+.mobile-burger-menu__language {
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.25s;
+  z-index: 1000;
+}
+.mobile-burger-menu__language:hover {
+  color: #8856D9;
+}
+
 .section.hidden .editions-item {
   transition: transform 0s;
   transform: translateX(-2000px);
@@ -183,6 +294,41 @@ h2 {
   top: 5px;
 }
 .header-menu__button span::before {
+  width: 25px;
+  top: 10px;
+}
+.header-menu__button1 {
+  width: 25px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: width 0.25s;
+  display: none;
+}
+.header-menu__button1 span {
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  display: block;
+}
+.header-menu__button1 span:hover {
+  color: #8856D9;
+}
+.header-menu__button1 span::after, .header-menu__button1 span::before {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transition: width 0.25s;
+}
+.header-menu__button1 span:after {
+  top: 5px;
+}
+.header-menu__button1 span::before {
   width: 25px;
   top: 10px;
 }
@@ -1165,10 +1311,10 @@ h2 {
   .container {
     width: 100%;
     margin: 0 auto;
-    padding-left: 15%;
+    padding-left: 10%;
   }
   #titleVid {
-    margin-left: 19%;
+    margin-left: 6%;
   }
   #newsTitle {
     margin-left: 8%;
@@ -1177,8 +1323,31 @@ h2 {
     margin-top: -33%;
     margin-left: -5%;
   }
+  .mobile-burger-menu.show-menu {
+    z-index: 1000;
+    padding-left: 45px;
+  }
   .header {
     width: 424px;
+  }
+  .header .ul-hidden {
+    display: none;
+  }
+  .header .show-menu {
+    display: block;
+    padding-left: unset;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .header .show-menu.header-menu__button:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .header .show-menu.header-menu__button:nth-child(1)::after {
+    opacity: 0;
+  }
+  .header .show-menu.header-menu__button:nth-child(1)::before {
+    transform: translateY(-8px) rotate(-45deg);
   }
   .header-menu__button {
     margin-left: 1%;
@@ -1188,9 +1357,13 @@ h2 {
     position: relative;
     z-index: 1;
     transition: width 0.25s;
+    display: none;
   }
   .header-menu__button span {
-    width: 15px;
+    width: 25px;
+  }
+  .header-menu__button1 {
+    display: block;
   }
   .header-menu__list ul {
     display: none;
@@ -1221,16 +1394,16 @@ h2 {
     width: 400px;
   }
   .description-button {
-    width: 424px;
+    width: 401px;
     display: grid;
     place-items: center;
   }
   .explore-info.reverse .explore-button {
-    margin-left: 43%;
+    margin-left: 30%;
   }
-  .explore-info.reverse .explore-description {
-    text-align: center;
-    margin-left: -21%;
+  .explore-info.reverse .explore-description.a {
+    margin-top: -15%;
+    margin-left: 0%;
   }
   .editions {
     margin-top: -50%;
@@ -1241,8 +1414,8 @@ h2 {
   .editions-list {
     display: flex;
     flex-direction: column;
-    width: 424px;
-    margin-left: -7%;
+    width: 402px;
+    margin-left: 0%;
   }
   .editions-item {
     background: linear-gradient(180deg, #141615 0%, #1c2023 100%);
@@ -1266,15 +1439,19 @@ h2 {
     margin: 0 auto;
   }
   .dual-description {
-    margin-left: 11%;
+    margin-left: -8%;
     width: 350px;
   }
   .dual-description__info {
     flex-direction: column;
     margin-left: -9%;
   }
+  .dual-description__price {
+    margin-left: 6%;
+  }
   .dual-description__button {
     margin-top: 20px;
+    margin-left: 9%;
   }
   .dual-img {
     display: none;
@@ -1283,10 +1460,10 @@ h2 {
     margin-top: 30px;
   }
   .video-info {
-    margin-left: 8%;
+    margin-left: 3%;
   }
   #video {
-    margin-left: 10%;
+    width: 110%;
   }
   .explore-switch {
     margin-left: 3%;
@@ -1296,13 +1473,16 @@ h2 {
   }
   .explore-list.active {
     margin-top: -16%;
-    margin-left: 21%;
+    text-align: left;
+  }
+  .explore-list.active.a {
+    margin-left: 6%;
   }
   .explore-button {
-    margin-left: 35%;
+    margin-left: 33%;
   }
   .news {
-    left: 9%;
+    left: 6%;
   }
   .news .swiper-wrapper {
     display: flex;

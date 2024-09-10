@@ -1,7 +1,13 @@
+const mobileBurgerMenu = document.getElementById('mobile-burger-menu')
 const burgerMenu = document.getElementById('burger-menu')
+const burgerMenus = document.getElementById('burger-menus')
+const burgerMenu1 = document.getElementById('burger-menu1')
+const header = document.getElementById('header')
 const ul = document.getElementById('ul')
 const lang = document.querySelector('.lang')
+const lang1 = document.querySelector('.lang1')
 const langs = document.querySelector('.header-menu__languages')
+const langs1 = document.querySelector('.mobile-burger-menu__languages')
 const svg = document.getElementById('svg')
 const title1 = document.getElementById('title1')
 const title2 = document.getElementById('title2')
@@ -40,9 +46,20 @@ const faqContent1 = document.getElementById('faqContent1')
 const faqContent2 = document.getElementById('faqContent2')
 const faqContent3 = document.getElementById('faqContent3')
 
+console.log(langs1);
+
 
 burgerMenu.addEventListener('click', function(){
     ul.classList.toggle('show')
+})
+
+burgerMenus.addEventListener('click',  function(){
+    mobileBurgerMenu.classList.toggle('show-menu')
+    header.classList.toggle('show')
+})
+burgerMenu1.addEventListener('click',  function(){
+    header.classList.toggle('show-menu')
+    mobileBurgerMenu.classList.toggle('show-menu')
 })
 
 
@@ -88,7 +105,10 @@ lang.addEventListener('click', function(){
     svg.classList.toggle('rotate')
 })
 
-
+lang1.addEventListener('click', function(){
+    langs1.classList.toggle('open')
+    svg.classList.toggle('rotate')
+})
 
 buyBtn1.addEventListener('click', function() {
     modal.classList.add('opened')

@@ -4,6 +4,128 @@
 //   transition: opacity 0.2s, transform 0.25s;
 //   opacity: 1;
 // }
+.ul-hidden{
+transform: translateX(-540px);
+transition-property: transform;
+transition-duration: 0.6s;
+transition-timing-function: ease;
+transition-delay: 0.3s; 
+}
+
+.mobile-burger-menu{
+  width: 127vw;
+  height: 122vh;
+  position: fixed;
+  padding-left: 10%;
+  overflow-y: hidden; 
+  background: #141615;
+
+  &ul{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(-82%);
+  }
+
+&.ul-hidden{
+    display: none;
+}
+
+&.show-menu{
+  display: block;
+  transform: translateX(0px);
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  transition-delay: 0.3s;
+  height: 120vh;
+  padding-top: 29px;
+}
+  &__button{
+    width: 25px;
+    height: 16px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: width 0.25s;
+    margin-top: 3%;
+
+    span{
+      width: 25px;
+        height: 2px;
+        background: $white;
+        position: relative;
+        display: block;
+        transform: rotate(41deg);
+        transition: transform 0.7s;
+
+        &::after{
+          display: block;
+          content: "";
+          width: 25px;
+          height: 2px;
+          background: $white;
+          position: absolute;
+          transition: width 0.25s;;
+          transform: rotate(-83deg);
+        }
+    }
+  }
+  &-ul{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    text-transform: uppercase;
+
+  }
+  .lang1{
+    color: $white;
+    font-weight: 700;
+    cursor: pointer;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: $white;
+      margin-left: 9px;
+
+      &.rotate{
+        transform: rotate(180deg);
+        transition: transform 0.5s;
+      }
+    }
+  }
+  &__languages {
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: $dark;
+    position: absolute;
+    top: 100%;
+    display: none;
+
+
+    &.open {
+      display: block;  
+      z-index: 1000;
+    }
+  }
+
+  &__language {
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.25s;
+    z-index: 1000;
+
+    &:hover {
+      color: $violet;
+    }
+  }
+}
 
 .section {
   &.hidden {
@@ -97,6 +219,48 @@
       position: relative;
       z-index: 1;
       transition: width 0.25s;
+
+      span {
+        width: 25px;
+        height: 2px;
+        background: $white;
+        position: relative;
+        display: block;
+
+        &:hover {
+          color: $violet;
+        }
+
+        &::after,
+        &::before {
+          display: block;
+          content: "";
+          width: 12px;
+          height: 2px;
+          background: $white;
+          position: absolute;
+          transition: width 0.25s;
+        }
+
+        &:after {
+          top: 5px; 
+        }
+
+        &::before {
+          width: 25px;
+          top: 10px;
+        }
+      }
+    }
+
+    &__button1 {
+      width: 25px;
+      height: 16px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      transition: width 0.25s;
+      display: none;
 
       span {
         width: 25px;
@@ -1231,7 +1395,7 @@
   .container {
     width: 100%;
     margin: 0 auto;
-    padding-left: 15%;
+    padding-left: 10%;
 }
 //   #titledu{
 //     margin-left: 18%;
@@ -1240,7 +1404,7 @@
 //     margin-left: 20%;
 //   }
   #titleVid{
-    margin-left: 19%;
+    margin-left: 6%;
   }
 //   #explTitle{
 //     margin-left: 28%;
@@ -1248,9 +1412,9 @@
 //   #exph3Title{
 //     margin-left: 31%;
 //   }
-//   #exph31Title{
-//     margin-left: 40%;
-//   }
+  // #exph31Title{
+  //   margin-left: 40%;
+  // }
   #newsTitle{
     margin-left: 8%;
   }
@@ -1258,8 +1422,44 @@
     margin-top: -33%;
     margin-left: -5%;
   }
+  .mobile-burger-menu{
+    &.show-menu{
+      // transform: translateX(0px);
+      // position:fixed;
+      // width: 100vw;
+      // height: 100vh;
+      z-index: 1000;
+      padding-left: 45px; 
+  }
+
+  }
   .header{
     width: 424px;
+    .ul-hidden{
+      display: none;
+  }
+
+
+
+  .show-menu{
+      display: block;
+      padding-left: unset;
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+      
+
+      &.header-menu__button:nth-child(1){
+          transform: translateY(8px) rotate(45deg);
+
+          &::after{
+            opacity: 0;
+          }
+          &::before{
+            transform: translateY(-8px) rotate(-45deg);
+          }
+      }
+  }
     &-menu{
       &__button {
         margin-left: 1%;
@@ -1269,9 +1469,14 @@
       position: relative;
       z-index: 1;
       transition: width 0.25s;
+      display: none;
       span {
-        width: 15px;
+        width: 25px;
       }
+
+      }
+      &__button1{
+        display: block;
       }
       &__list{
 
@@ -1312,17 +1517,19 @@
       width: 400px;
     }
     &-button {
-      width: 424px;
+      width: 401px;
       display: grid;
       place-items: center;
     }
   }
   .explore-info.reverse .explore-button{
-    margin-left: 43%;
+    margin-left: 30%;
   }
   .explore-info.reverse .explore-description {
-    text-align: center;
-    margin-left:  -21%;
+    &.a{
+      margin-top: -15%;
+      margin-left: 0%;
+    }
 }
   .editions{
     margin-top: -50%;
@@ -1332,8 +1539,8 @@
     &-list {
       display: flex;
       flex-direction: column;
-      width: 424px;
-      margin-left: -7%;
+      width: 402px;
+      margin-left: 0%;
     }
     &-item {
       background: linear-gradient(180deg, #141615 0%, #1c2023 100%);
@@ -1364,14 +1571,18 @@
   }
   .dual{
     &-description{
-      margin-left: 11%;
+      margin-left: -8%;
       width: 350px;
       &__info {
         flex-direction: column;
         margin-left: -9%;
       }
+      &__price{
+        margin-left: 6%;
+      }
       &__button {
         margin-top: 20px;
+        margin-left: 9%;
       }
     }
     &-img{
@@ -1382,12 +1593,12 @@
     margin-top: 30px;
 
     &-info{
-      margin-left: 8%;
+      margin-left: 3%;
     }
 
   }
   #video{
-    margin-left: 10%;
+    width: 110%;
   }
   .explore{
     &-switch{
@@ -1398,14 +1609,18 @@
     }
     &-list.active{
       margin-top: -16%;
-      margin-left: 21%;
+      text-align: left;
+
+      &.a{
+        margin-left: 6%;
+      }
     }
     &-button{
-      margin-left: 35%;
+      margin-left: 33%;
     }
   }
   .news{
-    left: 9%;
+    left: 6%;
     .swiper{
       &-wrapper{
       display: flex;
