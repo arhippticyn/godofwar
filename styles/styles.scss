@@ -5,11 +5,7 @@
 //   opacity: 1;
 // }
 .ul-hidden{
-transform: translateX(-540px);
-transition-property: transform;
-transition-duration: 0.6s;
-transition-timing-function: ease;
-transition-delay: 0.3s; 
+
 }
 
 .mobile-burger-menu{
@@ -30,18 +26,23 @@ transition-delay: 0.3s;
   }
 
 &.ul-hidden{
-    display: none;
+    transform: translate(-540px,100px);
+    transition-property: transform;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    padding-top: 29px;
 }
 
 &.show-menu{
-  display: block;
+  // display: block;
   transform: translateX(0px);
   transition-property: transform;
   transition-duration: 0.6s;
   transition-timing-function: ease;
   transition-delay: 0.3s;
   height: 120vh;
-  padding-top: 29px;
+  // padding-top: 29px;
+  // margin-top: 29px;
 }
   &__button{
     width: 25px;
@@ -103,12 +104,15 @@ transition-delay: 0.3s;
     border-radius: 6px;
     background: $dark;
     position: absolute;
-    top: 100%;
+    // top: 100%;
     display: none;
 
 
-    &.open {
-      display: block;  
+    &.open1 {
+      display: flex;
+      row-gap: 6px;
+      top: 54%;
+      flex-direction: column;  
       z-index: 1000;
     }
   }
