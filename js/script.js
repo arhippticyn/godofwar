@@ -6,7 +6,7 @@ const header = document.getElementById('header')
 const ul = document.getElementById('ul')
 const lang = document.querySelector('.lang')
 const lang1 = document.querySelector('.lang1')
-const langs = document.querySelector('.header-menu__languages')
+const langs = document.querySelector('.mobile-burger-menu__languages')
 const langs1 = document.querySelector('.mobile-burger-menu__languages')
 const svg = document.getElementById('svg')
 const title1 = document.getElementById('title1')
@@ -106,7 +106,7 @@ lang.addEventListener('click', function(){
 })
 
 lang1.addEventListener('click', function(){
-    langs1.classList.toggle('open')
+    langs1.classList.toggle('open1')
     svg.classList.toggle('rotate')
 })
 
