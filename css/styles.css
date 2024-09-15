@@ -85,14 +85,6 @@ h2 {
   color: #FF4136;
 }
 
-.ul-hidden {
-  transform: translateX(-540px);
-  transition-property: transform;
-  transition-duration: 0.6s;
-  transition-timing-function: ease;
-  transition-delay: 0.3s;
-}
-
 .mobile-burger-menu {
   width: 127vw;
   height: 122vh;
@@ -110,17 +102,19 @@ h2 {
   transform: translateY(-82%);
 }
 .mobile-burger-menu.ul-hidden {
-  display: none;
+  transform: translate(-5400px, 100px);
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  padding-top: 29px;
 }
 .mobile-burger-menu.show-menu {
-  display: block;
   transform: translateX(0px);
   transition-property: transform;
   transition-duration: 0.6s;
   transition-timing-function: ease;
   transition-delay: 0.3s;
   height: 120vh;
-  padding-top: 29px;
 }
 .mobile-burger-menu__button {
   width: 25px;
@@ -177,11 +171,13 @@ h2 {
   border-radius: 6px;
   background: #30373F;
   position: absolute;
-  top: 100%;
   display: none;
 }
-.mobile-burger-menu__languages.open {
-  display: block;
+.mobile-burger-menu__languages.open1 {
+  display: flex;
+  row-gap: 6px;
+  top: 79%;
+  flex-direction: column;
   z-index: 1000;
 }
 .mobile-burger-menu__language {
@@ -1322,6 +1318,23 @@ h2 {
   #faqTitle {
     margin-top: -33%;
     margin-left: -5%;
+  }
+  .mobile-burger-menu.ul-hidden {
+    transform: translate(-540px, 100px);
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+    padding-top: 29px;
+  }
+  .mobile-burger-menu.show-menu {
+    transform: translateX(0px);
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+    transition-delay: 0.3s;
+    height: 120vh;
+    z-index: 1000;
+    padding-left: 45px;
   }
   .mobile-burger-menu.show-menu {
     z-index: 1000;
