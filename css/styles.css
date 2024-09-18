@@ -1527,6 +1527,35 @@ h2 {
   .footer-lang {
     justify-content: center;
   }
+  #card {
+    width: 67%;
+  }
+  #expire {
+    margin-left: 1%;
+    width: 69%;
+  }
+  #ccv {
+    width: 54%;
+    margin-left: -23%;
+  }
+  #instant {
+    width: 68%;
+  }
+  .form-group.c label {
+    margin-left: -22%;
+  }
+  .modal {
+    width: 80%;
+  }
+  .modal-description {
+    width: 69%;
+  }
+  .modal-total {
+    width: 69%;
+  }
+  .modal-submit {
+    width: 70%;
+  }
 }
 @keyframes gravitation {
   0% {
