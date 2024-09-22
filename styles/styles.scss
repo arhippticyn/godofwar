@@ -4,6 +4,9 @@
 //   transition: opacity 0.2s, transform 0.25s;
 //   opacity: 1;
 // }
+html{
+  scroll-behavior: smooth;
+}
 .mobile-burger-menu{
   width: 127vw;
   height: 122vh;
@@ -1161,6 +1164,9 @@
     z-index: 9;
     cursor: pointer;
     transition: baclground 0.25s;
+    &-next:after, &-prev:after{
+      display: none;
+    }
 
     &:hover {
       background: $violet;

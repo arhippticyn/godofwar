@@ -85,6 +85,10 @@ h2 {
   color: #FF4136;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .mobile-burger-menu {
   width: 127vw;
   height: 122vh;
@@ -1093,6 +1097,9 @@ h2 {
   z-index: 9;
   cursor: pointer;
   transition: baclground 0.25s;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  display: none;
 }
 .swiper-button:hover {
   background: #8856D9;
