@@ -63,31 +63,24 @@ burgerMenu1.addEventListener('click',  function(){
 })
 
 
-// Встановлюємо кінцеву дату
 var endDate = new Date("Nov 8, 2025 23:59:59").getTime();
 
-// Оновлюємо таймер кожну секунду
 var timerInterval = setInterval(function() {
 
-    // Поточний час
     var now = new Date().getTime();
 
-    // Різниця між кінцевою датою і поточним часом
     var timeLeft = endDate - now;
 
-    // Розраховуємо дні, години, хвилини і секунди
     var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // Виводимо значення в HTML
     document.getElementById("days").innerHTML = days;
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 
-    // Якщо таймер завершився
     if (timeLeft < 0) {
         clearInterval(timerInterval);
         document.getElementById("days").innerHTML = "0";
