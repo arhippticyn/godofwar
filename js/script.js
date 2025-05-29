@@ -64,7 +64,7 @@ burgerMenu1.addEventListener('click',  function(){
 
 
 // Встановлюємо кінцеву дату
-var endDate = new Date("Nov 8, 2024 23:59:59").getTime();
+var endDate = new Date("Nov 8, 2025 23:59:59").getTime();
 
 // Оновлюємо таймер кожну секунду
 var timerInterval = setInterval(function() {
